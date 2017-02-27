@@ -1,0 +1,47 @@
+﻿<div class="col-md-12 no-hor-padding">
+    <div ng-class="{'col-md-5': _horizontal}">
+        <label class="col-xs-12 no-hor-padding" ng-if="label">{{::label}}</label>
+    </div>
+    <div ng-class="{'col-md-7': _horizontal}">
+        <button type="button" class="btn btn-info col-xs-10 overflow-hidden" data-toggle="dropdown" ng-disabled="!isActive"
+                tooltip-enable="isTooltipActive(selectedValue)" tooltip=" {{tooltipText}}" tooltip-placement="top" tooltip-trigger="mouseenter"
+                ng-class="selectedValue ? '' : ( isRequired ? 'no-elements-selected' : 'option-elements-selected')">
+            {{ selectedValue ? selectedValue[_displayPropertyName] : 'Select' }}
+        </button>
+        <button type="button" class="btn btn-default col-xs-2 dropdown-toggle" data-toggle="dropdown" ng-disabled="!isActive">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul ng-if="isActive" class="dropdown-menu dropdown-scrolled-y col-xs-10" role="menu">
+            <li ng-if="enableCheckBox" ng-click="stopEvent($event)" >
+                <div class="col-md-5">
+                    <custom-checkbox value="checkBoxState.isActiveStateSelected" label="Active" />
+                </div>
+                <div class="col-md-5">
+                    <custom-checkbox value="checkBoxState.isInActiveStateSelected" label="Inactive" />
+                </div>
+            </li>
+            <li ng-if="enableSearch && enableSearch.searchPropertyName" ng-click="stopEvent($event)">
+                <div class="dropdown-header">
+                    <input type="text" class="form-control width-100-percent" ng-model="searchFilter[enableSearch.searchPropertyName]" placeholder="Search...">
+                </div>
+            </li>
+            <li ng-if="!isRequired" class="dropDownItemBorder">
+                <a ng-click="changeSelectedItem(null)">{{ _clearOptionText }}</a>
+                <hr class="margin-0 margin-bottom-5" />
+                <hr class="margin-0" />
+            </li>
+            <li ng-repeat="option in options | filter: filter | filter: optionsFilter | filter: ( (!disabledFilter) || '' ) &&  searchFilter  | orderBy: orderByPropertyName"
+                tooltip-enable="isTooltipActive(option)" tooltip=" {{tooltipText}}" tooltip-placement="top" tooltip-trigger="mouseenter">
+                <span class="width-6 dropdown-mark" ng-if="isVisible(option)"></span>
+                <a ng-class="getOptionStyle(option)"
+                   ng-click="changeSelectedItem(option)">
+                    {{ ::option[_displayPropertyName] }}
+                    <span ng-if="isOptionWithDisabledStyle(option)"> *</span>
+                </a>
+             
+                <hr ng-if="!$last" class="margin-0" />
+            </li>
+        </ul>
+    </div>
+</div>

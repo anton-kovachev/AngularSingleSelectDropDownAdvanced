@@ -1,0 +1,74 @@
+<div class="grid-container" ng-controller="usersController as usersVM">
+    <div class="tableContainer">
+        <div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2><b>USER MANAGEMENT</b></h2>
+                </div>
+                <div class="col-md-4 col-sm-4 pull-right">
+                    <div class="form-group">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-group">
+                <single-select-drop-down class="col-md-8 formDataTopSmallMargin"
+                                         label="Primary User"
+                                         options="usersVM.userList"
+                                         selected-value="usersVM.selectedPrimaryUser"
+                                         is-active="true" is-required="true"
+                                         tooltip-enable="true"
+                                         tooltip-text="Inactive"
+                                         tooltip-trigger="{ propertyName: 'isActive', propertyValue: false}"
+                                         display-property-name="userName" order-by-property-name="userName"
+                                         disabled-option="{ propertyName: 'isActive', propertyValue: false, allowOptionSelection: false }"
+                                         enable-check-box="true"
+                                         change-selected-value-func="usersVM.selectPrimaryUser"
+                                         enable-search="{ searchPropertyName: 'userName' }"></single-select-drop-down>
+            </div>
+
+            <div class="row form-group">
+                <single-select-drop-down class="col-md-8 formDataTopSmallMargin"
+                                         label="Primary User"
+                                         options="usersVM.userList"
+                                         selected-value="usersVM.selectedPrimaryUser"
+                                         is-active="true" is-required="true"
+                                         tooltip-enable="true"
+                                         tooltip-text="Inactive"
+                                         tooltip-trigger="{ propertyName: 'isActive', propertyValue: false}"
+                                         display-property-name="userName" order-by-property-name="userName"
+                                         disabled-option="{ propertyName: 'isActive', propertyValue: false, allowOptionSelection: true}"
+                                         enable-check-box="true"
+                                         change-selected-value-func="usersVM.selectPrimaryUser"
+                                         enable-search="{ searchPropertyName: 'userName' }"></single-select-drop-down>
+            </div>
+
+            <div class="row form-group">
+                <single-select-drop-down class="col-md-8 formDataTopSmallMargin"
+                                         label="Primary User"
+                                         options="usersVM.userList"
+                                         selected-value="usersVM.selectedPrimaryUser"
+                                         is-active="true" is-required="true"
+                                         display-property-name="firstName" order-by-property-name="userName"
+                                         enable-check-box="false"
+                                         change-selected-value-func="usersVM.selectPrimaryUser"
+                                         enable-search="{ searchPropertyName: 'firstName' }"></single-select-drop-down>
+            </div>
+
+
+            <div class="row form-group">
+                <single-select-drop-down class="col-md-8 formDataTopSmallMargin"
+                                         label="Primary User"
+                                         options="usersVM.userList"
+                                         selected-value="usersVM.selectedPrimaryUser"
+                                         is-active="true" is-required="false"
+                                         display-property-name="lastName" order-by-property-name="userName"
+                                         enable-check-box="false"
+                                         change-selected-value-func="usersVM.selectPrimaryUser"
+                                         enable-search="{ searchPropertyName: 'lastName' }"></single-select-drop-down>
+            </div>
+
+        </div>
+    </div>
+</div>
