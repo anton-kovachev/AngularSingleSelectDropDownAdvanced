@@ -4,10 +4,8 @@ define(['angular', 'angularRoutes',  'ngDialog', 'uiBootstrap',
     'commonModules/commonDirectives/commonDirectives',
     'commonModules/commonDirectives/singleSelectDropDownDirective/singleSelectDropDown',
     'userManagement/scripts/controllers/controllers',
-    //'userManagement/scripts/controllers/loginController',
     'userManagement/scripts/controllers/usersController',
-    'userManagement/scripts/services/services',
-   // 'userManagement/scripts/directives/directives'
+    'userManagement/scripts/services/services'
    ],
     function (angular) {
 

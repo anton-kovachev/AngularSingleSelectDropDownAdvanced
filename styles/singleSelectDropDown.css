@@ -9,7 +9,6 @@
 @import url('./colorbox.css');
 @import url('./jquery-ui.css');
 @import url('./ngDialog.css');
-@import url('./ngDialog-theme-default.css');
 @import url('./bootstrap.css');
 @import url('./font-awesome.css');
 @import url('./singleSelectDropDown.css');
@@ -84,28 +83,7 @@ table > thead > tr:first-child > th:nth-child(2n+1){
     clear: both;
 }
 
-.table-container {
-    clear: both;
-    padding-top: 100px;
-    width: 90%;
-}
 
-.ng-table th.sort {
-    cursor: pointer;
-}
-
-.multiselect div button {
-    padding: 6px;
-    border: 1px solid #CCC;
-}
-
-.multiselect > div > button, .multiselect > div {
-    width: 100%;
-}
-
-.multiselect > div > button {
-    background: #EEE;
-}
 
 .dropdown-mark {
     position: absolute;
@@ -117,14 +95,6 @@ table > thead > tr:first-child > th:nth-child(2n+1){
     background-color:#24498f;
 }
 
-.multiselect .dropdown-header {
-    padding: 5px 0 0 10px;
-}
-
-    .multiselect > div > ul {
-        /*position: relative;*/
-        max-height: 280px;
-    }
 
 .multiselect .dropdown-menu {
     z-index: 800 !important;
@@ -194,12 +164,6 @@ table > thead > tr:first-child > th:nth-child(2n+1){
     margin-top: 20px;
 }
 
-.primaryName {
-    color: #ad1d40;
-    margin-left: 15px;
-    padding-left: 15px;
-    border-left: 1.5px solid #777777;
-}
 
 #background {
     position: absolute;
@@ -690,16 +654,6 @@ table > thead > tr:first-child > th:nth-child(2n+1){
 .divTableInner {
     display: table-cell;
     vertical-align: middle;
-}
-
-.userProfileDataContainer {
-    position: absolute;
-    width: 35%;
-    min-height: 100%;
-    left: 0;
-    margin-left: 2%;
-    text-align: left;
-    margin-top: 0%;
 }
 
 .formDataLeftMargin {
@@ -2367,33 +2321,6 @@ width-6 {
     transform: translateY(-50%);
 }
 
-.competency-validation-table > thead > tr > th, .competency-validation-table > thead > tr > td {
-    vertical-align: middle !important;
-    /*font-weight: normal;*/
-    /*border: 1px solid #ddd !important;*/
-}
-
-.competency-validation-table {
-    margin-bottom: 0;
-}
-
-    .competency-validation-table > tfoot > tr > td {
-        background-color: #CCCCCC;
-        font-weight: bold;
-    }
-
-    .competency-validation-table > tbody > tr {
-        /*padding-left: 10px;*/
-    }
-
-.competency-validation-table-odd {
-    background-color: #F2F0F1;
-}
-
-th.competency-validation-table-odd {
-    background-color: #F2F0F1 !important;
-}
-
 .ckeckmark {
     /*position: absolute; */ /* keeps the label near the checkbox jump up and down when clicked */ /*BUG: makes the checkmark not in the box*/
     display: inline-block;
@@ -2446,11 +2373,6 @@ th.competency-validation-table-odd {
     box-shadow: 0px 0px 2px 2px yellow;
 }
 
-.cancelButtonProfile {
-    position: absolute;
-    bottom: 4%;
-    right: 2%;
-}
 
 .inline-block {
     display: inline-block;
@@ -2520,55 +2442,6 @@ th.competency-validation-table-odd {
     width: 150px;
     padding-left: 5px;
     cursor: pointer;
-}
-
-.compatency-validation-highlight {
-    background-color: #003595 !important;
-    color: #FFFFFF;
-}
-
-.compatency-validation-highlight-criteria-left {
-    /*background-color: #003595 !important;*/
-    /*color: #FFFFFF;*/
-    border-left: 10px solid #003595;
-}
-
-.compatency-validation-highlight-criteria-right {
-    /*background-color: #003595 !important;*/
-    /*color: #FFFFFF;*/
-    border-right: 10px solid #003595;
-}
-
-.compatency-validation-highlight-all {
-    /*background-color: #003595 !important;*/
-    /*color: #FFFFFF;*/
-    border-left: 10px solid #003595;
-    border-right: 10px solid #003595;
-}
-
-thead.compatency-validation-highlight th {
-    background-color: #003595 !important;
-    color: #FFFFFF;
-}
-
-tr.compatency-validation-highlight td {
-    background-color: #003595 !important;
-    color: #FFFFFF;
-}
-
-.competency-validation-attempt-panel {
-    background-color: #78777B;
-    color: white;
-}
-
-.competency-validation-pointer-box {
-    background-color: #9F9F9F;
-    width: 20px;
-    display: inline-block;
-}
-
-.competency-validation-header {
-    font-size: 1.2em !important;
 }
 
 
@@ -2720,8 +2593,6 @@ tr.compatency-validation-highlight td {
 .margin-bottom-5{
     margin-bottom: 5px;
 }
-
-
 
 .font-size-72 {
     font-size: 72px;
