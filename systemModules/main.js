@@ -10,11 +10,7 @@ require.config({
         jqueryUI: '../scripts/jquery-ui',
         jqueryColorbox: '../scripts/jquery-colorbox',
         domReady: '../scripts/domReady',
-        reactive: '../scripts/rx',
-        moment: '../scripts/moment.min',
         ngDialog: '../scripts/ngDialog',
-        lodash: '../scripts/lodash',
-        angularDropdownMultiselect: '../scripts/angularjs-dropdown-multiselect',
 
     },
     shim: {
@@ -27,9 +23,6 @@ require.config({
         },
         ngDialog: {
             deps: ['angular']
-        },
-        angularDropdownMultiselect: {
-            deps: ['angular', 'lodash']
         },
         bootstrap: {
             deps: ['jquery']
@@ -58,12 +51,9 @@ require([
   'app',
   'domReady',
   'angularRoutes',
-  'reactive',
   'jquery',
   'bootstrap',
-  'ngDialog',
-  'lodash'
-],
+  'ngDialog'],
   function (angular, app) {
       'use strict';
 

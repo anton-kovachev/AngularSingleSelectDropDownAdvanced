@@ -2,7 +2,7 @@
     mainConfigFile: '../systemModules/main.js',
     appDir: '../',
     baseUrl: 'systemModules',
-    dir: '../v2build',
+    dir: '../demobuild',
     paths: {
         //angular: 'empty:',
         //angularRoutes: 'empty:',
