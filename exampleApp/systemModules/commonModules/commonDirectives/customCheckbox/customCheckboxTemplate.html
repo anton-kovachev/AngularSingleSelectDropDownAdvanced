@@ -1,0 +1,26 @@
+<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label ng-class="disabled === true ? 'disabled' : 'hover'" ng-click="handleClick()">
+
+                <span ng-if="threeStates === true">
+                    <span ng-show="value === true" class="fa fa-plus-square-o fa-lg"></span>
+                    <span ng-show="value === false" class="fa fa-minus-square-o fa-lg"></span>
+                    <span ng-show="value === undefined" class="fa fa-square-o fa-lg"></span>
+                </span>
+
+                <span ng-if="threeStates === false">
+                    <span class="fixed-size-square margin-auto vertical-align-middle">
+                        <span ng-class="{ckeckmark: value}">
+                            <div class="stem"></div>
+                            <div class="kick"></div>
+                        </span>
+                    </span>
+                </span>
+
+                <span>&nbsp;{{label}}</span>
+
+            </label>
+        </div>
+    </div>
+</div>
